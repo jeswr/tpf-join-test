@@ -1,0 +1,25 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@ldf/server/^3.0.0/components/context.jsonld",
+  "@id": "urn:ldf-server:my",
+  "import": "preset-qpf:config-defaults.json",
+
+  "title": "My Linked Data Fragments server",
+
+  "datasources": [
+    {
+      "@id": "ex:myHdtDatasource",
+      "@type": "TurtleDatasource",
+      "datasourceTitle": "Earl Data",
+      "description": "My dataset with sample Earl Data",
+      "datasourcePath": "earl",
+      "file": "./earl.ttl"
+    }
+  ],
+  
+  "router": [
+    {
+      "@id": "preset-qpf:sets/routers.json#myPageRouter",
+      "pageSize": 1000
+    }
+  ]
+}
